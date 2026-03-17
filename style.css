@@ -54,9 +54,11 @@ section#ownthing {
       0 0 30px #00f0ff;
   */
 
-  display: inline-block;
-  width: fit-content;
+  display: inline-flex;
+  width: min-content;
   min-width: min-content;
+
+  flex-flow: column nowrap;
 
   & .article {
     width: max-content;
