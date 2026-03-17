@@ -30,8 +30,12 @@
       
       console.table(getDebugInfo());
       
+      let timeout;
       window.addEventListener('resize', () => {
-        console.table(getDebugInfo());
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          console.table(getDebugInfo());
+        }, 100);
       });
 
     </script>
