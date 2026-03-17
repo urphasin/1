@@ -14,9 +14,27 @@
     <div class="article">saturation</div>
     <div class="article">icebreeze</div>
     <button class="button">Gradient Background</button>
+    
+    
     <script>
-      console.log(window.innerWidth + "px", innerHeight + "px")
+
+      function getDebugInfo() {
+        return ({
+          width: window.innerWidth,
+          height: window.innerHeight,
+          dpr: window.devicePixelRatio,
+          screenWidth: screen.width,
+          screenHeight: screen.height
+        });
+      }
+      
+      console.table(getDebugInfo());
+      window.addEventListener('resize', () => {
+        console.table(getDebugInfo());
+      });
+
     </script>
+
   </section>
   
   <div class="dialog-wrapper">
