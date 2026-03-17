@@ -11,6 +11,21 @@ section#ownthing {
   margin-block: 5vh;
 }
 
+/* desktop */
+@media (max-width: 1024px) {
+  
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+}
+
 .button {
   transform: translateY(0);
   transition: transform 0.25s ease;
