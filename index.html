@@ -9,9 +9,13 @@
 </head>
 
 <body>
+  <header></header>
+  <aside></aside>
+  <main></main>
+  <footer></footer>
   <header class="main-nav">
     <a class="logo" href="#">Messing Around</a>
-    
+
     <nav>
       <ul>
         <li><a class="active-page" href="#">Home</a></li>
@@ -23,68 +27,78 @@
       </ul>
     </nav>
   </header>
-  
+
+  <aside class="sidebar">
+    sidebar
+  </aside>
+
+  <main>
+    <section id="ownthing">
+      <div class="article">growth</div>
+      <div class="article">saturation</div>
+      <div class="article">icebreeze</div>
+      <div class="article">fire nation</div>
+      <div class="article">jazz rocks</div>
+      <div class="article">party</div>
+      <div class="article">all</div>
+      <div class="article">night</div>
+      <div class="article">long</div>
+
+      <!-- <button class="button">Gradient Background</button> -->
 
 
-  <section id="ownthing">
-    <div class="article">growth</div>
-    <div class="article">saturation</div>
-    <div class="article">icebreeze</div>
-    <div class="article">fire nation</div>
-    <div class="article">jazz rocks</div>
-    <div class="article">party</div>
-    <div class="article">all</div>
-    <div class="article">night</div>
-    <div class="article">long</div>
+      <script>
 
-    <!-- <button class="button">Gradient Background</button> -->
+        function getDebugInfo() {
+          return ({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            dpr: window.devicePixelRatio,
+            screenWidth: screen.width,
+            screenHeight: screen.height
+          });
+        }
 
+        console.table(getDebugInfo());
 
-    <script>
-
-      function getDebugInfo() {
-        return ({
-          width: window.innerWidth,
-          height: window.innerHeight,
-          dpr: window.devicePixelRatio,
-          screenWidth: screen.width,
-          screenHeight: screen.height
+        let timeout;
+        window.addEventListener('resize', () => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            console.table(getDebugInfo());
+          }, 100);
         });
-      }
 
-      console.table(getDebugInfo());
+      </script>
 
-      let timeout;
-      window.addEventListener('resize', () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-          console.table(getDebugInfo());
-        }, 100);
-      });
+    </section>
 
-    </script>
+    <div class="dialog-wrapper">
 
-  </section>
+      <div class="center">
+        <button class="open-popup">Open Popup</button>
+      </div>
 
-  <div class="dialog-wrapper">
-
-    <div class="center">
-      <button class="open-popup">Open Popup</button>
-    </div>
-
-    <div class="popup" id="popup">
-      <div class="overlay"></div>
-      <div class="popup-content">
-        <h2>large-text</h2>
-        <p>long-small-text</p>
-        <div class="controls">
-          <button class="close-btn">Close</button>
-          <button class="submit-btn">Submit</button>
+      <div class="popup" id="popup">
+        <div class="overlay"></div>
+        <div class="popup-content">
+          <h2>large-text</h2>
+          <p>long-small-text</p>
+          <div class="controls">
+            <button class="close-btn">Close</button>
+            <button class="submit-btn">Submit</button>
+          </div>
         </div>
       </div>
-    </div>
 
-  </div>
+    </div>
+  </main>
+
+<footer>
+  hello footer
+</footer>
+
+
 </body>
 
 </html>
